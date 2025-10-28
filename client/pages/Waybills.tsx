@@ -24,13 +24,14 @@ export default function Waybills() {
             Waybills Management
           </h3>
           <p className="text-muted-foreground mb-6">
-            This module is ready for full implementation. It will allow you to track trip details,
-            departure and arrival information, odometer readings, fuel consumption, and associated
-            refueling operations.
+            This module is ready for full implementation. It will allow you to
+            track trip details, departure and arrival information, odometer
+            readings, fuel consumption, and associated refueling operations.
           </p>
           <p className="text-sm text-muted-foreground mb-6">
-            Continue prompting to build out the complete Waybills interface with form submission,
-            data management, and integration with other modules.
+            Continue prompting to build out the complete Waybills interface with
+            form submission, data management, and integration with other
+            modules.
           </p>
           <div className="flex gap-3 justify-center">
             <Button onClick={() => navigate("/")} variant="outline">

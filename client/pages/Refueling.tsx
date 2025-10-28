@@ -24,13 +24,15 @@ export default function Refueling() {
             Refueling Management
           </h3>
           <p className="text-muted-foreground mb-6">
-            This module is ready for full implementation. It will allow you to record refueling
-            operations with fuel quantity, refueling location type (barrel or gas station),
-            dates, and link them to waybills for comprehensive fuel tracking.
+            This module is ready for full implementation. It will allow you to
+            record refueling operations with fuel quantity, refueling location
+            type (barrel or gas station), dates, and link them to waybills for
+            comprehensive fuel tracking.
           </p>
           <p className="text-sm text-muted-foreground mb-6">
-            Continue prompting to build out the complete Refueling interface with fuel consumption
-            calculations, refueling history, and cost analysis.
+            Continue prompting to build out the complete Refueling interface
+            with fuel consumption calculations, refueling history, and cost
+            analysis.
           </p>
           <div className="flex gap-3 justify-center">
             <Button onClick={() => navigate("/")} variant="outline">

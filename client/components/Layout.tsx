@@ -1,5 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
-import { Package, MapPin, Truck, Fuel, DollarSign, BarChart3 } from "lucide-react";
+import {
+  Package,
+  MapPin,
+  Truck,
+  Fuel,
+  DollarSign,
+  BarChart3,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface LayoutProps {
@@ -74,7 +81,7 @@ export function Layout({ children }: LayoutProps) {
                     "flex items-center gap-3 px-4 py-3 rounded-lg transition-all",
                     isActive
                       ? "bg-primary text-primary-foreground shadow-md"
-                      : "text-foreground hover:bg-muted"
+                      : "text-foreground hover:bg-muted",
                   )}
                 >
                   <Icon className="w-5 h-5 flex-shrink-0" />
@@ -92,9 +99,7 @@ export function Layout({ children }: LayoutProps) {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-auto">
-        {children}
-      </main>
+      <main className="flex-1 overflow-auto">{children}</main>
     </div>
   );
 }

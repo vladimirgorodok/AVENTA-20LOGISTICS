@@ -68,8 +68,8 @@ export default function Locations() {
                 name: generatedName,
                 updatedAt: new Date().toISOString(),
               }
-            : loc
-        )
+            : loc,
+        ),
       );
     } else {
       const newLocation: Location = {
@@ -135,7 +135,8 @@ export default function Locations() {
             Места (Locations)
           </h1>
           <p className="text-muted-foreground">
-            Manage loading and unloading locations with addresses and contact information
+            Manage loading and unloading locations with addresses and contact
+            information
           </p>
         </div>
 
@@ -143,7 +144,8 @@ export default function Locations() {
         <div className="mb-6 flex justify-between items-center">
           <div>
             <p className="text-sm text-muted-foreground">
-              Total locations: <span className="font-semibold">{locations.length}</span>
+              Total locations:{" "}
+              <span className="font-semibold">{locations.length}</span>
             </p>
           </div>
           <Dialog open={open} onOpenChange={handleOpenChange}>
@@ -159,7 +161,8 @@ export default function Locations() {
                   {editingId ? "Edit Location" : "Add New Location"}
                 </DialogTitle>
                 <DialogDescription>
-                  Fill in the location details including address and contact information
+                  Fill in the location details including address and contact
+                  information
                 </DialogDescription>
               </DialogHeader>
 
@@ -210,7 +213,10 @@ export default function Locations() {
                         setFormData({
                           ...formData,
                           coordinates: {
-                            ...(formData.coordinates || { latitude: 0, longitude: 0 }),
+                            ...(formData.coordinates || {
+                              latitude: 0,
+                              longitude: 0,
+                            }),
                             latitude: parseFloat(e.target.value) || 0,
                           },
                         })
@@ -229,7 +235,10 @@ export default function Locations() {
                         setFormData({
                           ...formData,
                           coordinates: {
-                            ...(formData.coordinates || { latitude: 0, longitude: 0 }),
+                            ...(formData.coordinates || {
+                              latitude: 0,
+                              longitude: 0,
+                            }),
                             longitude: parseFloat(e.target.value) || 0,
                           },
                         })
@@ -300,7 +309,10 @@ export default function Locations() {
                   <Label>Cargo Types</Label>
                   <div className="space-y-2">
                     {defaultCargoTypes.map((cargo) => (
-                      <label key={cargo} className="flex items-center gap-2 cursor-pointer">
+                      <label
+                        key={cargo}
+                        className="flex items-center gap-2 cursor-pointer"
+                      >
                         <input
                           type="checkbox"
                           checked={formData.cargoType?.includes(cargo) || false}
@@ -379,7 +391,8 @@ export default function Locations() {
                 <DialogHeader>
                   <DialogTitle>Add New Location</DialogTitle>
                   <DialogDescription>
-                    Fill in the location details including address and contact information
+                    Fill in the location details including address and contact
+                    information
                   </DialogDescription>
                 </DialogHeader>
 
@@ -427,7 +440,10 @@ export default function Locations() {
                           setFormData({
                             ...formData,
                             coordinates: {
-                              ...(formData.coordinates || { latitude: 0, longitude: 0 }),
+                              ...(formData.coordinates || {
+                                latitude: 0,
+                                longitude: 0,
+                              }),
                               latitude: parseFloat(e.target.value) || 0,
                             },
                           })
@@ -446,7 +462,10 @@ export default function Locations() {
                           setFormData({
                             ...formData,
                             coordinates: {
-                              ...(formData.coordinates || { latitude: 0, longitude: 0 }),
+                              ...(formData.coordinates || {
+                                latitude: 0,
+                                longitude: 0,
+                              }),
                               longitude: parseFloat(e.target.value) || 0,
                             },
                           })
@@ -513,10 +532,15 @@ export default function Locations() {
                     <Label>Cargo Types</Label>
                     <div className="space-y-2">
                       {defaultCargoTypes.map((cargo) => (
-                        <label key={cargo} className="flex items-center gap-2 cursor-pointer">
+                        <label
+                          key={cargo}
+                          className="flex items-center gap-2 cursor-pointer"
+                        >
                           <input
                             type="checkbox"
-                            checked={formData.cargoType?.includes(cargo) || false}
+                            checked={
+                              formData.cargoType?.includes(cargo) || false
+                            }
                             onChange={(e) => {
                               const current = formData.cargoType || [];
                               if (e.target.checked) {
@@ -583,13 +607,17 @@ export default function Locations() {
                     {location.company && (
                       <div className="flex items-start gap-2">
                         <Building2 className="w-4 h-4 text-muted-foreground mt-1 flex-shrink-0" />
-                        <span className="text-sm text-muted-foreground">{location.company}</span>
+                        <span className="text-sm text-muted-foreground">
+                          {location.company}
+                        </span>
                       </div>
                     )}
                     {location.contact && (
                       <div className="flex items-start gap-2">
                         <Phone className="w-4 h-4 text-muted-foreground mt-1 flex-shrink-0" />
-                        <span className="text-sm text-muted-foreground">{location.contact}</span>
+                        <span className="text-sm text-muted-foreground">
+                          {location.contact}
+                        </span>
                       </div>
                     )}
                     <div className="flex items-start gap-2">

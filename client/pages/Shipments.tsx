@@ -56,8 +56,8 @@ export default function Shipments() {
                 mileage,
                 updatedAt: new Date().toISOString(),
               }
-            : ship
-        )
+            : ship,
+        ),
       );
     } else {
       const newShipment: Shipment = {
@@ -133,7 +133,8 @@ export default function Shipments() {
         <div className="mb-6 flex justify-between items-center">
           <div>
             <p className="text-sm text-muted-foreground">
-              Total shipments: <span className="font-semibold">{shipments.length}</span>
+              Total shipments:{" "}
+              <span className="font-semibold">{shipments.length}</span>
             </p>
           </div>
           <Dialog open={open} onOpenChange={handleOpenChange}>
@@ -201,7 +202,9 @@ export default function Shipments() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="unloadingOdometer">Unloading Odometer</Label>
+                    <Label htmlFor="unloadingOdometer">
+                      Unloading Odometer
+                    </Label>
                     <Input
                       id="unloadingOdometer"
                       type="number"
@@ -232,7 +235,9 @@ export default function Shipments() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="unloadingLocation">Unloading Location *</Label>
+                    <Label htmlFor="unloadingLocation">
+                      Unloading Location *
+                    </Label>
                     <Input
                       id="unloadingLocation"
                       placeholder="Location ID"
@@ -352,7 +357,9 @@ export default function Shipments() {
 
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="loadingOdometer">Loading Odometer *</Label>
+                      <Label htmlFor="loadingOdometer">
+                        Loading Odometer *
+                      </Label>
                       <Input
                         id="loadingOdometer"
                         type="number"
@@ -366,7 +373,9 @@ export default function Shipments() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="unloadingOdometer">Unloading Odometer</Label>
+                      <Label htmlFor="unloadingOdometer">
+                        Unloading Odometer
+                      </Label>
                       <Input
                         id="unloadingOdometer"
                         type="number"
@@ -383,7 +392,9 @@ export default function Shipments() {
 
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="loadingLocation">Loading Location *</Label>
+                      <Label htmlFor="loadingLocation">
+                        Loading Location *
+                      </Label>
                       <Input
                         id="loadingLocation"
                         placeholder="Location ID"
@@ -397,7 +408,9 @@ export default function Shipments() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="unloadingLocation">Unloading Location *</Label>
+                      <Label htmlFor="unloadingLocation">
+                        Unloading Location *
+                      </Label>
                       <Input
                         id="unloadingLocation"
                         placeholder="Location ID"
@@ -462,19 +475,28 @@ export default function Shipments() {
                 <thead className="border-b border-border bg-muted/50">
                   <tr>
                     <th className="text-left p-4 font-semibold">Name</th>
-                    <th className="text-left p-4 font-semibold">Loading Date</th>
+                    <th className="text-left p-4 font-semibold">
+                      Loading Date
+                    </th>
                     <th className="text-right p-4 font-semibold">Mileage</th>
-                    <th className="text-right p-4 font-semibold">Cargo Weight</th>
+                    <th className="text-right p-4 font-semibold">
+                      Cargo Weight
+                    </th>
                     <th className="text-right p-4 font-semibold">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   {shipments.map((shipment) => (
-                    <tr key={shipment.id} className="border-b border-border hover:bg-muted/50">
+                    <tr
+                      key={shipment.id}
+                      className="border-b border-border hover:bg-muted/50"
+                    >
                       <td className="p-4">{shipment.name}</td>
                       <td className="p-4">{shipment.loadingDate}</td>
                       <td className="p-4 text-right">{shipment.mileage} km</td>
-                      <td className="p-4 text-right">{shipment.cargoWeight} kg</td>
+                      <td className="p-4 text-right">
+                        {shipment.cargoWeight} kg
+                      </td>
                       <td className="p-4 text-right">
                         <div className="flex gap-2 justify-end">
                           <Button

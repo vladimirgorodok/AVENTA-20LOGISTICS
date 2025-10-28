@@ -24,13 +24,15 @@ export default function Finance() {
             Finance Management
           </h3>
           <p className="text-muted-foreground mb-6">
-            This module is ready for full implementation. It will allow you to track financial
-            operations, manage charges and payments, calculate balances, handle deductions,
-            and generate monthly reporting with automatic calculations.
+            This module is ready for full implementation. It will allow you to
+            track financial operations, manage charges and payments, calculate
+            balances, handle deductions, and generate monthly reporting with
+            automatic calculations.
           </p>
           <p className="text-sm text-muted-foreground mb-6">
-            Continue prompting to build out the complete Finance interface with transaction
-            history, balance sheets, monthly reports, and financial analysis tools.
+            Continue prompting to build out the complete Finance interface with
+            transaction history, balance sheets, monthly reports, and financial
+            analysis tools.
           </p>
           <div className="flex gap-3 justify-center">
             <Button onClick={() => navigate("/")} variant="outline">

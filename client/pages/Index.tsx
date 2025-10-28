@@ -44,7 +44,8 @@ export default function Index() {
   const modules = [
     {
       title: "Места (Locations)",
-      description: "Manage loading and unloading locations with addresses and contact info",
+      description:
+        "Manage loading and unloading locations with addresses and contact info",
       icon: MapPin,
       path: "/locations",
       color: "bg-purple-50 dark:bg-purple-950",
@@ -58,7 +59,8 @@ export default function Index() {
     },
     {
       title: "Перевозки (Shipments)",
-      description: "Track shipments from loading to unloading with calculated mileage",
+      description:
+        "Track shipments from loading to unloading with calculated mileage",
       icon: Package,
       path: "/shipments",
       color: "bg-blue-50 dark:bg-blue-950",
@@ -72,7 +74,8 @@ export default function Index() {
     },
     {
       title: "Путевые листы (Waybills)",
-      description: "Create and manage waybills for trips with departure and arrival info",
+      description:
+        "Create and manage waybills for trips with departure and arrival info",
       icon: Truck,
       path: "/waybills",
       color: "bg-orange-50 dark:bg-orange-950",
@@ -100,7 +103,8 @@ export default function Index() {
     },
     {
       title: "Финансы (Finance)",
-      description: "Track payments and financial operations with automatic calculations",
+      description:
+        "Track payments and financial operations with automatic calculations",
       icon: DollarSign,
       path: "/finance",
       color: "bg-green-50 dark:bg-green-950",
@@ -126,7 +130,8 @@ export default function Index() {
                 Complete Transportation & Logistics Management System
               </p>
               <p className="text-sm opacity-75 mt-3">
-                Manage shipments, locations, waybills, fuel, and finances in one place
+                Manage shipments, locations, waybills, fuel, and finances in one
+                place
               </p>
             </div>
             <div className="hidden md:block">
@@ -144,13 +149,18 @@ export default function Index() {
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
-              <div key={index} className="bg-card rounded-xl shadow-sm border border-border p-6">
+              <div
+                key={index}
+                className="bg-card rounded-xl shadow-sm border border-border p-6"
+              >
                 <div className="flex items-start justify-between">
                   <div>
                     <p className="text-sm font-medium text-muted-foreground mb-2">
                       {stat.label}
                     </p>
-                    <p className="text-3xl font-bold text-foreground">{stat.value}</p>
+                    <p className="text-3xl font-bold text-foreground">
+                      {stat.value}
+                    </p>
                   </div>
                   <div
                     className={`w-12 h-12 rounded-lg bg-gradient-to-br ${stat.color} p-3`}
@@ -167,7 +177,9 @@ export default function Index() {
       {/* Features/Modules Section */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-foreground mb-2">Core Modules</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-2">
+            Core Modules
+          </h2>
           <p className="text-muted-foreground">
             Explore all the features of your transportation management system
           </p>
@@ -181,7 +193,9 @@ export default function Index() {
                 key={index}
                 className="bg-card rounded-xl shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow"
               >
-                <div className={`h-3 w-full bg-gradient-to-r ${modules[index].color.includes('purple') ? 'from-purple-500 to-pink-500' : modules[index].color.includes('blue') ? 'from-blue-500 to-cyan-500' : modules[index].color.includes('orange') ? 'from-orange-500 to-red-500' : modules[index].color.includes('amber') ? 'from-amber-500 to-yellow-500' : 'from-green-500 to-emerald-500'}`}></div>
+                <div
+                  className={`h-3 w-full bg-gradient-to-r ${modules[index].color.includes("purple") ? "from-purple-500 to-pink-500" : modules[index].color.includes("blue") ? "from-blue-500 to-cyan-500" : modules[index].color.includes("orange") ? "from-orange-500 to-red-500" : modules[index].color.includes("amber") ? "from-amber-500 to-yellow-500" : "from-green-500 to-emerald-500"}`}
+                ></div>
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <Icon className={`w-8 h-8 ${module.accentColor}`} />
@@ -197,7 +211,9 @@ export default function Index() {
                     {module.features.map((feature, featureIdx) => (
                       <div key={featureIdx} className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                        <span className="text-xs text-muted-foreground">{feature}</span>
+                        <span className="text-xs text-muted-foreground">
+                          {feature}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -223,10 +239,12 @@ export default function Index() {
                 <Zap className="w-full h-full text-accent-foreground" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Get Started</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">
+                  Get Started
+                </h3>
                 <p className="text-muted-foreground mb-4">
-                  Begin by setting up your locations, then create shipments and manage your
-                  transportation operations efficiently.
+                  Begin by setting up your locations, then create shipments and
+                  manage your transportation operations efficiently.
                 </p>
               </div>
             </div>

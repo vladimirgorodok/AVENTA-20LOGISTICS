@@ -25,7 +25,7 @@ export interface Location {
   };
   company: string; // Фирма
   contact: string; // Контакт
-  loadingType: 'rear' | 'side' | 'top'; // Тип загрузки: Задняя, Боковая, Верхняя
+  loadingType: "rear" | "side" | "top"; // Тип загрузки: Задняя, Боковая, Верхняя
   cargoType: string[]; // Груз (multiple selections)
   comment: string; // Комментарий к месту
   createdAt: string;
@@ -39,7 +39,7 @@ export interface Refueling {
   id: string;
   date: string; // Дата заправки
   liters: number; // Количество литров
-  location: 'barrel' | 'gas_station'; // Место заправки: Бочка, АЗС
+  location: "barrel" | "gas_station"; // Место заправки: Бочка, АЗС
   waybillId: string; // Связь с Путевые листы
   createdAt: string;
   updatedAt: string;
@@ -89,7 +89,7 @@ export interface Shipment {
 export interface Finance {
   id: string;
   operationDate: string; // Дата операции
-  operationType: 'charged' | 'received'; // Тип операции: Начислено, Поступило
+  operationType: "charged" | "received"; // Тип операции: Начислено, Поступило
   charged: number; // Начислено
   received: number; // Поступило
   paymentMonth: string; // Месяц оплаты
